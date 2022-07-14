@@ -4,6 +4,6 @@
 
 
 
-Commits by points in YT:
+Commits by points:
 Cleanup Process Push - 24:48
 Adding Icons for UI - 47:00
