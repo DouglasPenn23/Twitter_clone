@@ -7,3 +7,5 @@
 Commits by points:
 Cleanup Process Push - 24:48
 Adding Icons for UI - 47:00
+Finished Sidebar - 1:08:54
+Need to fix CSS/ Working on Posts - 2:14
