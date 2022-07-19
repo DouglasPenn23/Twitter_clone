@@ -32,10 +32,10 @@ function Post({ displayName, username, verified, text, image, avatar}) {
             alt="" 
             />
             <div className="post__footer">
-            <ChatBubbleOutlineIcon fontsize="small" />
-            <RepeatIcon fontsize="small"/>
-            <FavoriteBorderIcon fontsize="small" />
-            <PublishIcon fontsize="small"/>
+            <ChatBubbleOutlineIcon fontSize="small" />
+            <RepeatIcon fontSize="small"/>
+            <FavoriteBorderIcon fontSize="small" />
+            <PublishIcon fontSize="small"/>
             </div>
         </div>
     </div>

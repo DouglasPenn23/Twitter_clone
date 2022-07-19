@@ -1,10 +1,36 @@
-import React from 'react'
+import React from "react";
 import "./Widgets.css";
+import {
+  TwitterTimelineEmbed,
+  TwitterShareButton,
+  TwitterTweetEmbed,
+} from "react-twitter-embed";
+import SearchIcon from '@mui/icons-material/Search';
 
 function Widgets() {
   return (
     <div className="widgets">
-        <h2>Widgets</h2>
+      <div className="widgets__input">
+        <SearchIcon className="widgets__searchIcon" />
+        <input placeholder="Search Twitter" type="text" />
+      </div>
+
+      <div className="widgets__widgetContainer">
+        <h2>What's happening</h2>
+
+        <TwitterTweetEmbed tweetId={"20"} />
+
+        <TwitterTimelineEmbed
+          sourceType="profile"
+          screenName="JaMorant"
+          options={{ height: 400 }}
+        />
+
+        <TwitterShareButton
+          url={"https://github.com/DouglasPenn23"}
+          options={{ text: "Woah this guy is one good developer", via: "@Doug" }}
+        /> 
+      </div>
     </div>
   );
 }

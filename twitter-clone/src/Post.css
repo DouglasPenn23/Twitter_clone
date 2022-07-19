@@ -18,7 +18,7 @@
 .post__footer {
     display: flex;
     justify-content: space-between;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .post_headerDescription {
