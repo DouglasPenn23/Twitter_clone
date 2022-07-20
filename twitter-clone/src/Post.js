@@ -12,23 +12,23 @@ function Post({ displayName, username, verified, text, image, avatar}) {
   return(
     <div className="post">
         <div className="post__avatar">
-        <Avatar src="https://www.captainmitchs.com/wp-content/uploads/2018/01/wood-duck-PFYHVZN.jpg" />
+        <Avatar src= {avatar} />
         </div>
         <div className="post__body">
             <div className="post__header">
                 <div className="post__headerText">
                     <h3>
-                        Jimmy John{" "} 
+                        {displayName}{" "} 
                             <span>
-                            <VerifiedUserIcon className="post__badge" /> 
+                            {verified && <VerifiedUserIcon className="post__badge" />} @{username}
                             </span>
                     </h3>
                 </div>
                 <div className="post__headerDescription">
-                    <p> I Challenge you to be the best coder you can be. </p>
+                    <p>{text}</p>
                 </div>
             </div>
-            <img src="https://th.bing.com/th/id/R.3b33718921fc7c64120c3b65ecf386a4?rik=sRwZDndUfHVLxQ&riu=http%3a%2f%2fwww.saic.edu%2f%7eanelso13%2fgif%2fimages%2fcat14.gif&ehk=9lh2HAMRMJuPNR%2fSPLVMk27UjjMgb%2bJjsPACnkh1ObY%3d&risl=&pid=ImgRaw&r=0" 
+            <img src={image} 
             alt="" 
             />
             <div className="post__footer">
