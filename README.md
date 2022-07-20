@@ -10,3 +10,4 @@ Adding Icons for UI - 47:00
 Finished Sidebar - 1:08:00
 Need to fix CSS/ Working on Posts - 2:14:00
 About to set up Database - 2:34:24
+Finished setting up DB, about to add ability to post tweets - 3:01:00
