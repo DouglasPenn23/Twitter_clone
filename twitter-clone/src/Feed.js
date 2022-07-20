@@ -1,10 +1,19 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import TweetBox from './TweetBox';
 import Post from './Post';
 import "./Feed.css";
-
+import db from './firebase';
 
 function Feed() {
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() =>{
+    db.collection('posts').onSnapshot(snapshot => (
+      setPosts(snapshot.docs.map(doc => doc.data()))
+    ))
+  }, []);
+
+
   return (
     <div className="feed">
       <div className='feed__header'>
@@ -14,18 +23,18 @@ function Feed() {
     
     <TweetBox />
 
+      {posts.map(post => (
     <Post
-    displayName="Lebron Lames"
-    username='Lebron'
+    displayName={post.displayName}
+    username={post.username}
     verified={true}
-    text="Lakers will lose again this year"
-    avatar="https://s1.stabroeknews.com/images/2021/01/LeBron-Jamess.jpg"
-    image="https://giphy.com/gifs/sbnation-sbnation-paul-lebron-9I7LBisi4GtAA"
+    text={post.text}
+    avatar= {post.avatar}
+    image={post.image}
     />
-
-    
+      ))}
     </div>
-  )
+  );
 }
 
 export default Feed

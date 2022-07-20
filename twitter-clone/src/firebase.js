@@ -1,5 +1,23 @@
 
-import firebase from "firebase";
+// Attempt #3 at importing
+// // v9 compat packages are API compatible with v8 code
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
+// import { initializeApp } from 'firebase/app';
+
+
+// Attempt #1 at importing
+// import firebase from "./firebase";
+
+// Attempt #2 at importing 
+// import firebase from 'firebase/app';
+
+// Attempt #4 at importing
+// import firebase from "firebase"
+
+// Attempt #5 at importing
+// import { initializeApp } from 'firebase/app';
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
@@ -12,7 +30,7 @@ const firebaseConfig = {
     measurementId: "G-19F1N1PFN9"
   };
 
-  const firebaseApp = firebase.intializeApp(firebaseConfig);
+  const firebaseApp = firebase.initializeApp(firebaseConfig);
 
   const db = firebaseApp.firestore()
 
