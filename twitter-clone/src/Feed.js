@@ -6,9 +6,13 @@ import db from './firebase';
 import FlipMove from 'react-flip-move';
 
 function Feed() {
+  // useState() allows us to utilize the state feature in React
+  // In this application we'll be using state to control how we handle the posts & setting the posts
   const [posts, setPosts] = useState([]);
 
   useEffect(() =>{
+    // Go into the database, look at the collection of posts
+    // Take a snapshot then use the snapshot to set the posts based on the data.
     db.collection('posts').onSnapshot(snapshot => (
       setPosts(snapshot.docs.map(doc => doc.data()))
     ))
@@ -27,6 +31,7 @@ function Feed() {
   <FlipMove>
   {posts.map(post => (
     <Post
+    // The Following is an example of props
       key={post.text}
       displayName={post.displayName}
       username={post.username}
